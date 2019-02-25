@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 
 import { LandingComponent } from './components/landing/landing.component';
-import { MatGridListModule, MatCardModule } from '@angular/material';
+import { MatCardModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -13,8 +13,7 @@ import { MatGridListModule, MatCardModule } from '@angular/material';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatCardModule,
-    MatGridListModule
+    MatCardModule
   ]
 })
 export class HomeModule { }
