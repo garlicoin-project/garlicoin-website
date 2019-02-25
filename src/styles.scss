@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@import '~@angular/material/theming';
+@import '~@mdi/font/css/materialdesignicons.min.css';
+
+@include mat-core();
+
+$app-theme: mat-light-theme(mat-palette($mat-indigo), mat-palette($mat-pink, A200, A100, A400));
+
+@include angular-material-theme($app-theme);

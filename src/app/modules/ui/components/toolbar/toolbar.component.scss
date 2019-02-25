@@ -1,0 +1,23 @@
+.app-toolbar {
+  background: none;
+
+  .fill-mid-space {
+    flex: 1 1 auto;
+  }
+
+  .toolbar-icons {
+    a {
+      margin-left: 15px;
+      color: #fff;
+    }
+
+    span {
+      font-size: 25px;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
