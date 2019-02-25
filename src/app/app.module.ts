@@ -1,16 +1,21 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {AppComponent} from './components/app/app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {UiModule} from './modules/ui/ui.module';
+import { AppRoutingModule } from './app-routing.module';
+import { UiModule } from './modules/ui/ui.module';
+
+import { AppComponent } from './components/app/app.component';
+import { RootComponent } from './components/root/root.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RootComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     UiModule
   ],
