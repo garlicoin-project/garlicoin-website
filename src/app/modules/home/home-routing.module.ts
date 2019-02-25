@@ -3,10 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LandingComponent } from './components/landing/landing.component';
 
+// Displays landing component for all routes
 const routes: Routes = [
   {
-    path: '**',
+    path: '',
     component: LandingComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
