@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { DownloadsRoutingModule } from './downloads-routing.module';
 
+import { DownloadComponent } from './components/download/download.component';
+
 @NgModule({
-  declarations: [],
+  declarations: [DownloadComponent],
   imports: [
     CommonModule,
     DownloadsRoutingModule
