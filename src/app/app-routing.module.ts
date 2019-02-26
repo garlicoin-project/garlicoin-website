@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
       {
         // Defines a lazy loaded route at "/" with the home module
-        path: '',
+        path: 'home',
         loadChildren: './modules/home/home.module#HomeModule'
       },
       {
@@ -31,11 +31,11 @@ const routes: Routes = [
         loadChildren: './modules/pools/pools.module#PoolsModule'
       },
       // New routes go before the catch all
-      // {
-      //   // Redirects all unmatched routes to home
-      //   path: '**',
-      //   redirectTo: ''
-      // }
+      {
+        // Redirects all unmatched routes to home
+        path: '**',
+        redirectTo: 'home'
+      }
     ]
   }
 ];
