@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GuideRoutingModule } from './guide-routing.module';
+import { GuideComponent } from './components/guide/guide.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [GuideComponent],
   imports: [
     CommonModule,
     GuideRoutingModule

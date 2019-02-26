@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { GuideComponent } from './components/guide/guide.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: GuideComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
