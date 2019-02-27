@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 @import '~@angular/material/theming';
@@ -12,3 +13,9 @@
 $app-theme: mat-light-theme(mat-palette($mat-indigo), mat-palette($mat-pink, A200, A100, A400));
 
 @include angular-material-theme($app-theme);
+
+.app-page {
+  background: #2d2d2d;
+
+  padding: 50px 0;
+}

@@ -1,5 +1,7 @@
 .app-toolbar {
   background: none;
+  position: relative;
+  z-index: 1;
 
   .fill-mid-space {
     flex: 1 1 auto;
