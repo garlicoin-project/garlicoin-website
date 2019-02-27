@@ -1,4 +1,12 @@
 <mat-toolbar class="app-toolbar" color="primary">
+
+  <div class="router-links">
+    <a mat-flat-button [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+    <a mat-flat-button [routerLink]="['/downloads']" routerLinkActive="router-link-active">Downloads</a>
+    <a mat-flat-button [routerLink]="['/guide']" routerLinkActive="router-link-active">Guide</a>
+    <a mat-flat-button [routerLink]="['/pools']" routerLinkActive="router-link-active">Pools</a>
+  </div>
+
   <span class="fill-mid-space"></span>
 
   <div class="toolbar-icons">

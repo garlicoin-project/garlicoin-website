@@ -4,7 +4,7 @@
 
   <!-- Router outlet where everything goes that changes -->
   <!-- Would want to add the gradient in this component if we want to keep that everwhere -->
-  <div class="container">
-      <router-outlet></router-outlet>
+  <div class="container" [@routerTransition]="getState(o)">
+      <router-outlet #o="outlet"></router-outlet>
   </div>
 </div>
