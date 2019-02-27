@@ -9,7 +9,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
-  isSmall$: Observable<boolean> = this.breakpointObserver.observe('(max-width: 400px)')
+  isSmall$: Observable<boolean> = this.breakpointObserver.observe('(max-width: 675px)')
     .pipe(
       map(result => result.matches)
     );

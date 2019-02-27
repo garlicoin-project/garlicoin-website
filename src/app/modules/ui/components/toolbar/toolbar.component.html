@@ -12,10 +12,18 @@
     <mat-toolbar class="toolbar" color="primary">
       <ng-template [ngIf]="!(isSmall$ | async)">
         <div class="router-links">
-          <a mat-flat-button [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
-          <a mat-flat-button [routerLink]="['/downloads']" routerLinkActive="router-link-active">Downloads</a>
-          <a mat-flat-button [routerLink]="['/guide']" routerLinkActive="router-link-active">Guide</a>
-          <a mat-flat-button [routerLink]="['/pools']" routerLinkActive="router-link-active">Pools</a>
+          <a mat-flat-button [routerLink]="['/home']" routerLinkActive="router-link-active">
+            <span>Home</span>
+          </a>
+          <a mat-flat-button [routerLink]="['/downloads']" routerLinkActive="router-link-active">
+            <span>Downloads</span>
+          </a>
+          <a mat-flat-button [routerLink]="['/guide']" routerLinkActive="router-link-active">
+            <span>Guide</span>
+          </a>
+          <a mat-flat-button [routerLink]="['/pools']" routerLinkActive="router-link-active">
+            <span>Pools</span>
+          </a>
         </div>
       </ng-template>
       <ng-template [ngIf]="(isSmall$ | async)">
@@ -38,6 +46,7 @@
         </a>
       </div>
     </mat-toolbar>
+    <mat-divider></mat-divider>
     <ng-content></ng-content>
   </mat-drawer-content>
 </mat-drawer-container>

@@ -1,6 +1,5 @@
 .drawer {
   height: 100%;
-
   background-image: url("/assets/images/gradient.png");
   background-size: cover;
 
@@ -10,10 +9,17 @@
 
   .toolbar {
     padding: 0px;
-
     width: 100%;
-
     background: none;
+
+    a {
+      color: white;
+      background: none;
+    }
+
+    span {
+      font-size: 25px;
+    }
 
     .fill-mid-space {
       flex: 1 1 auto;
@@ -23,10 +29,6 @@
       a {
         margin-left: 15px;
         color: #fff;
-      }
-
-      span {
-        font-size: 25px;
       }
 
       .icon {
