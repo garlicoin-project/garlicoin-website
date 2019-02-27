@@ -1,23 +1,43 @@
-<mat-toolbar class="app-toolbar" color="primary">
+<mat-drawer-container class="drawer" [hasBackdrop]="true">
+  <mat-drawer #drawer [mode]="'over'">
+    <mat-toolbar>Garlicoin</mat-toolbar>
+    <mat-nav-list>
+        <a mat-list-item [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+        <a mat-list-item [routerLink]="['/downloads']" routerLinkActive="router-link-active">Downloads</a>
+        <a mat-list-item [routerLink]="['/guide']" routerLinkActive="router-link-active">Guide</a>
+        <a mat-list-item [routerLink]="['/pools']" routerLinkActive="router-link-active">Pools</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar class="toolbar" color="primary">
+      <ng-template [ngIf]="!(isSmall$ | async)">
+        <div class="router-links">
+          <a mat-flat-button [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+          <a mat-flat-button [routerLink]="['/downloads']" routerLinkActive="router-link-active">Downloads</a>
+          <a mat-flat-button [routerLink]="['/guide']" routerLinkActive="router-link-active">Guide</a>
+          <a mat-flat-button [routerLink]="['/pools']" routerLinkActive="router-link-active">Pools</a>
+        </div>
+      </ng-template>
+      <ng-template [ngIf]="(isSmall$ | async)">
+        <button aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </ng-template>
 
-  <div class="router-links">
-    <a mat-flat-button [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
-    <a mat-flat-button [routerLink]="['/downloads']" routerLinkActive="router-link-active">Downloads</a>
-    <a mat-flat-button [routerLink]="['/guide']" routerLinkActive="router-link-active">Guide</a>
-    <a mat-flat-button [routerLink]="['/pools']" routerLinkActive="router-link-active">Pools</a>
-  </div>
+      <span class="fill-mid-space"></span>
 
-  <span class="fill-mid-space"></span>
-
-  <div class="toolbar-icons">
-    <a href="https://discord.gg/nZWHe33" target="_blank">
-      <button mat-icon-button><span class="mdi mdi-discord"></span></button>
-    </a>
-    <a href="https://www.reddit.com/r/garlicoin/" target="_blank">
-      <button mat-icon-button><span class="mdi mdi-reddit"></span></button>
-    </a>
-    <a href="https://github.com/GarlicoinOrg" target="_blank">
-      <button mat-icon-button><span class="mdi mdi-github-circle"></span></button>
-    </a>
-  </div>
-</mat-toolbar>
+      <div class="toolbar-icons">
+        <a href="https://discord.gg/nZWHe33" target="_blank">
+          <button class="icon" mat-icon-button><span class="mdi mdi-discord"></span></button>
+        </a>
+        <a href="https://www.reddit.com/r/garlicoin/" target="_blank">
+          <button class="icon" mat-icon-button><span class="mdi mdi-reddit"></span></button>
+        </a>
+        <a href="https://github.com/GarlicoinOrg" target="_blank">
+          <button class="icon" mat-icon-button><span class="mdi mdi-github-circle"></span></button>
+        </a>
+      </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>
