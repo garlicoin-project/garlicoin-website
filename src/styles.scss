@@ -1,7 +1,17 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   border: none;
+}
+
+html,
+body,
+app-root {
+  height: 100%;
+
+  max-width: 100%;
+  min-width: 300px;
+  min-height: 100%;
 }
 
 @import '~@angular/material/theming';
