@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { RootComponent } from './components/root/root.component';
+import { WrapperComponent } from './components/wrapper/wrapper.component';
 
 const routes: Routes = [
   {
-    // Defines a route at "/" with the RootComponent
+    // Defines a route at "/" with the WrapperComponent
     path: '',
-    component: RootComponent,
-    // Defines child routes to be displayed in RootComponent's <router-outlet>
+    component: WrapperComponent,
+    // Defines child routes to be displayed in WrapperComponent's <router-outlet>
     children: [
       {
         // Defines a lazy loaded route at "/" with the home module

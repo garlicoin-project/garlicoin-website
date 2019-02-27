@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   border: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 html,
@@ -22,3 +23,9 @@ app-root {
 $app-theme: mat-light-theme(mat-palette($mat-indigo), mat-palette($mat-pink, A200, A100, A400));
 
 @include angular-material-theme($app-theme);
+
+.app-page {
+  background: #2d2d2d;
+
+  padding: 50px 0;
+}

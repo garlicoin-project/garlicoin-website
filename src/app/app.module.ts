@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { UiModule } from './modules/ui/ui.module';
 
 import { AppComponent } from './components/app/app.component';
-import { RootComponent } from './components/root/root.component';
+import { WrapperComponent } from './components/wrapper/wrapper.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RootComponent
+    WrapperComponent
   ],
   imports: [
     BrowserModule,

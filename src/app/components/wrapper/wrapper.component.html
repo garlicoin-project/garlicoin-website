@@ -1,7 +1,10 @@
 <!-- Initializes the toolbar -->
 <app-ui-toolbar>
   <!-- Router outlet where everything goes that changes -->
-  <div class="container" [@routerTransition]="getState(o)">
+
+  <!--<div class="container" [@routerTransition]="getState(o)">
     <router-outlet #o="outlet"></router-outlet>
-  </div>
+  </div>-->
+
+  <router-outlet></router-outlet>
 </app-ui-toolbar>
